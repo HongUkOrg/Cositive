@@ -11,6 +11,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MainView extends StatelessWidget {
+
+  Widget homeView = HomeView();
+  Widget couponView = CouponView();
+  Widget chatView = ChatView();
+  Widget myView = MyView();
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -21,13 +27,13 @@ class MainView extends StatelessWidget {
               if (state is MainStateHome) {
                 switch(state.currentPage) {
                   case MainPage.home:
-                    return HomeView();
+                    return homeView;
                   case MainPage.coupon:
-                    return CouponView();
+                    return couponView;
                   case MainPage.chat:
-                    return ChatView();
+                    return chatView;
                   case MainPage.my:
-                    return MyView();
+                    return myView;
                 }
               }
               return Center(

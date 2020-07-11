@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
+
+  HomeView() {
+    print('bleo: homeview init');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
